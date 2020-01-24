@@ -36,7 +36,7 @@ app.use(flash());
 app.use(session({
     secret: process.env.SESSION_SECRET,
     resave: false,
-    saveUnititialized: false
+    saveUninitialized: false
 }));
 
 app.use(passport.initialize());
@@ -50,6 +50,21 @@ replaced with some database to store users and relivent related information
 const users = [];
 
 
+//add postgress
+const {Pool, Client} = require('pg')
+
+// pools will use environment variables
+// for connection information
+const pool = new Pool()
+pool.query('SELECT NOW()', (err, res) => {
+  console.log(err, res)
+})
+
+// clients will also use environment variables
+// for connection information
+const client = new Client()
+client.connect()
+const res = client.query('SELECT NOW()')
 
 
 /*
@@ -94,7 +109,14 @@ app.post('/register', async (req, res) =>
         console.log(salt);
         console.log(hashed);
         const user = {id: uid.v4(), name: req.body.name, email: req.body.email, password: hashed};
-        users.push(user);
+        //users.push(user);
+
+        //add users to database
+        pool.query('SELECT * from users', (err, res) => {
+        console.log(err, res)
+        pool.end()
+        })
+
         console.log(user)
         res.redirect('/login');
     }

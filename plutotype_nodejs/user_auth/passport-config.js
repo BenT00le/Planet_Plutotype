@@ -5,6 +5,17 @@ function initialize(passport, getUserByEmail, getUserById)
 {
     const auth = async (email, password, done) =>
     {
+        const client = new Client()
+        const valid = 'pw'
+        await client.connect()
+        
+        pool.query('SELECT NOW()', (err, res) =>
+        {
+          console.log(err, res)
+          valid = res;
+          pool.end()
+        })
+
         const user = getUserByEmail(email);
         console.log('authenticate');
         console.log(user);
@@ -16,7 +27,7 @@ function initialize(passport, getUserByEmail, getUserById)
         {
             try
             {
-                if (await bcrypt.compare(password, user.password))
+                if (await bcrypt.compare(password, valid))
                 {
                     return done(null, user);
                 }
