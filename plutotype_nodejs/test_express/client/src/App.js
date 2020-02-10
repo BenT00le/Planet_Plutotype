@@ -28,13 +28,13 @@ function App(){
 
   <div className="App">
     <h1>test</h1>
-    <Test name = "monday" isHit = {hit} color = 'blue'/>
-    <Test name = "tusday" isHit = {hit} color = 'red'/>
-    <Test name = "oneday" isHit = {hit} color = 'white'/>
-    <Test name = "tdfsoday" isHit = {hit} color = 'green'/>
-    <Test name = "tue4ay" isHit = {hit} color = 'blue'/>
-    <Test name = "o34dfgday" isHit = {hit} color = 'red'/>
-    <Test name = "sunday" isHit = {hit} color = 'white'/>
+    <Test name = "monday" isHit = {hit} color = {'blue'}/>
+    <Test name = "tusday" isHit = {hit} color = {'red'} />
+    <Test name = "oneday" isHit = {hit} color = {'white'} />
+    <Test name = "tdfsoday" isHit = {hit} color = {'green'}/>
+    <Test name = "tue4ay" isHit = {hit} color = {'blue'}/>
+    <Test name = "o34dfgday" isHit = {hit} color = {'red'}/>
+    <Test name = "sunday" isHit = {hit} color = {'white'}/>
   </div>
   );
 }
