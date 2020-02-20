@@ -1,18 +1,23 @@
-class PlanIT_App {
-    
-    /* Setup the postgre connection server */
-    const {Pool, Client} = require('pg')
-    // TODO: Set the current path to the DB server
-    // TODO: Setup loop to confirm the conneciton
-    const connectionString = ''
-    const client = new client { connectionString:connectionString }
-    client.connect()
-    
+class DateTask {
+
+    constructor() {
+        // TODO: Set the current path to the DB server
+        // TODO: Setup loop to confirm the conneciton
+
+        // Confirm that postgres is avalible
+        var pg = require('pg');
+        // The string that is passes as the connection variables
+        var connectionString = '';
+        // Setting up the client from the DB
+        var client = new pg.Client(connectionString);
+        // The connection port to the client
+        client.connect();
+    }
     
     /**
      * This function confirms the login infomration of the user
      */
-    function LogIn(USRNM, PASS) {
+    LogIn(USRNM, PASS) {
         var returnValue = 0;
         // TODO: INJECTION STERILIZATION
         // TODO: CHECK TO SEE IF QUERY WORKED
@@ -31,7 +36,7 @@ class PlanIT_App {
     /**
      * This function accepts a date, and returns the tasks for the next 7 days
      */
-    function getWeekTasks(startDay, userID) {
+    getWeekTasks(startDay, userID) {
         // Date new Date(year, month, day, hours, minutes, seconds, milliseconds)
         var queryString = '';
         var i;
@@ -54,7 +59,7 @@ class PlanIT_App {
     /**
      * This function gets the individual tasks
      */
-    function getIndividualTask(startDay, userID, endingCharacter) {
+    getIndividualTask(startDay, userID, endingCharacter) {
         // Date new Date(year, month, day, hours, minutes, seconds, milliseconds)
         var queryString = '';
         queryString = (queryString + 'SELECT * FROM TASKS WHERE userid = ' + userID + ' AND day = ' + startDay.getDate()
@@ -67,11 +72,10 @@ class PlanIT_App {
         
         return queryResults.rows
     }
-    
 }
 
 
 
+/************************** MAIN *********************/
 
-
-
+var func = new DateTask();
