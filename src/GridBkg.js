@@ -2,21 +2,15 @@ import React from 'react';
 import './App.css';
 import './Task.js';
 
-function Day()
+function GridBkg()
 {
 	//we need a colection of tasks to display
 	return(
 		<div>
-			<ul>
-				//display all tasks passed in
-				/*
-				{for task}<Task x,y,params>
-					
-				*/
-			</ul>
+			//?
 		</div>
 
 	);
 }
 
-export default Day
+export default GridBkg
