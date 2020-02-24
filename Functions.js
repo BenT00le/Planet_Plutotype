@@ -1,17 +1,46 @@
 class DateTask {
 
-    constructor() {
+    constructor(currentDay) {
         // TODO: Set the current path to the DB server
         // TODO: Setup loop to confirm the conneciton
 
-        // Confirm that postgres is avalible
-        var pg = require('pg');
-        // The string that is passes as the connection variables
-        var connectionString = '';
-        // Setting up the client from the DB
-        var client = new pg.Client(connectionString);
-        // The connection port to the client
-        client.connect();
+
+
+        const {Client} = require('pg')
+        const client = new Client({
+          user: 'postgres',     // Username
+          host: 'localhost',    // The IP
+          database: 'p_db',     // The DB
+          password: 'password', // Password for the user
+          port: 5432,           // port
+        })
+
+        client.connect()
+        .then(() => console.log("CONNECTION SUCCESSFUL"))
+        .catch(e => console.log(e))
+        .finally(() => client.end)
+
+
+
+
+
+
+
+
+
+        
+
+        // // Confirm that postgres is avalible
+        // var pg = require('pg');
+        // // The string that is passes as the connection variables
+        // var connectionString = "postgres://postgres:password/127.0.0.1:5432/nameOfDatabase";
+        // // Setting up the client from the DB
+        // var client = new pg.Client(connectionString);
+        // // The connection port to the client
+        // client.connect()
+        // .then(() => console.log("Connection Successful"))
+        // .catch(e => console.log(e))
+        // .finally(() => client.end)
     }
     
     /**
