@@ -1,0 +1,35 @@
+DOCKER DB INSTRUCITONS
+
+/* Make sure you are logged in for pushing/ pulling */
+
+1) How to pull the docker image
+	docker pull georgefoxstudent/plan_itdb:ThisIsTheDatabase
+
+2) Check to see if it's dowloaded
+	docker image ls
+
+3) Run the Docker image
+	docker start postgres-0
+
+4) Check to see if running
+	docker ps
+
+5) Bash into the docker image 
+	docker exec -it postgres-0 bash
+
+6) Login to the Postgres DB from the docker image
+	psql -U postgres
+
+7) To push any changes made to the DB
+	docker push georgefoxstudent/plan_itdb:ThisIsTheDatabase
+
+8) To stop Docker
+	docker stop <Container ID>
+
+/* Connect though external client */
+
+psql -h 127.0.0.1 -p 5432 -U postgres
+
+/* To check running configurations */
+	/conninfo;
+
