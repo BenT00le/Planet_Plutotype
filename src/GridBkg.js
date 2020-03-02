@@ -1,13 +1,14 @@
 import React from 'react';
 import './App.css';
 import './Task.js';
+import './Day.js';
 
 function GridBkg()
 {
-	//we need a colection of tasks to display
 	return(
+		// classname = 'grid'
 		<div>
-			//?
+			//display a list of days side to side
 		</div>
 
 	);
