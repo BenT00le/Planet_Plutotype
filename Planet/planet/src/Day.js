@@ -1,10 +1,20 @@
 import React from 'react';
 import './App.css';
+import './Task.js';
 
-function Day({name,color})
+function Day(props)
 {
+	//we need a colection of tasks to display
 	return(
-		<h1>{props.name}</h1>
+		<div>
+			<ul>
+				//display all tasks passed in vertical
+				/*
+				{for task}<Task x,y,params>
+					
+				*/
+			</ul>
+		</div>
 
 	);
 }
