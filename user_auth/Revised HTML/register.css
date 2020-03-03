@@ -1,81 +1,9 @@
-a:link {
-  color: #4A4A4A;
-  text-decoration: none;
-}
 
-a:visited {
-  color: #4A4A4A;
-}
-
-a:hover {
-  font-size: 20px; 
-  color: #4A4A4A;
-}
- 
-    
-    
-    *{
-      box-sizing: border-box;
-      padding: 0;
-      margin: 0;
-    }
-    
     .formGrid {
         display: grid;
         grid-template-columns: 1fr 3fr 1fr;
         grid-template-rows: 200px 500px 1fr;
     }
-    
-    .menu-bar {
-        grid-row: 1;
-        grid-column: 1/5;
-        background-color: white;
-        /* Grid Settings */
-        
-        display: grid;
-        grid-template-columns: 5fr 1fr 10px 1fr 10px 1fr 10px;
-        grid-template-rows: 20px 1fr 120px;
-    }
-    
-        .logo {
-            padding-left: 25px;
-            background-color: white;
-            grid-row: 1/4;
-            grid-column: 1/2;
-        }
-        
-        .logo #logo {
-            object-fit: scale;
-            width: 190px;
-            height: 150px;
-        }
-        
-        .hbutton1 {
-            background-color: #FDF9BA;
-            z-index: 2;
-            padding: 25px;
-            text-align: center;
-            grid-row: 2/3;
-            grid-column: 2/3;
-        }
-        
-        .hbutton2 {
-            background-color: #FDF9BA;
-            z-index: 2;
-            padding: 25px;
-            text-align: center;
-            grid-row: 2/3;
-            grid-column: 4/5;
-        }
-        
-        .hbutton3 {
-            background-color: #FDF9BA;
-            z-index: 2;
-            padding: 25px;
-            text-align: center;
-            grid-row: 2/3;
-            grid-column: 6/7;
-        }
     
     .theForm {
         border-radius: 10px;
