@@ -2,12 +2,25 @@
 /***** FOR DESKTOP *********/
 @media screen and (min-width: 1400px) {
     
+   a:link {
+      color: #4A4A4A;
+      text-decoration: none;
+    }
+    
+    a:visited {
+      color: #4A4A4A;
+    }
+    
+    a:hover {
+      font-size: 20px; 
+      color: #4A4A4A;
+    }
+    
     *{
       box-sizing: border-box;
       padding: 0;
       margin: 0;
     }
-    
     
     .theGrid {
         display: grid;
@@ -18,19 +31,18 @@
     .menu-bar {
         grid-row: 1;
         grid-column: 1/5;
-        background-color: blue;
+        background-color: white;
         /* Grid Settings */
         
         display: grid;
-        grid-template-columns: 5fr 1fr 1fr;
-        grid-template-rows: 1fr;
-        row-gap: 30px;
+        grid-template-columns: 5fr 1fr 10px 1fr 10px 1fr 10px;
+        grid-template-rows: 20px 1fr 120px;
     }
     
         .logo {
             padding-left: 25px;
             background-color: white;
-            grid-row: 1/2;
+            grid-row: 1/4;
             grid-column: 1/2;
         }
         
@@ -41,19 +53,30 @@
         }
         
         .hbutton1 {
+            background-color: #FDF9BA;
+            z-index: 2;
             padding: 25px;
             text-align: center;
-            background-color: white;
-            grid-row: 1/2;
+            grid-row: 2/3;
             grid-column: 2/3;
         }
         
         .hbutton2 {
+            background-color: #FDF9BA;
+            z-index: 2;
             padding: 25px;
             text-align: center;
-            background-color: white;
-            grid-row: 1/2;
-            grid-column: 3/4;
+            grid-row: 2/3;
+            grid-column: 4/5;
+        }
+        
+        .hbutton3 {
+            background-color: #FDF9BA;
+            z-index: 2;
+            padding: 25px;
+            text-align: center;
+            grid-row: 2/3;
+            grid-column: 6/7;
         }
     
     .wrapper1 {
@@ -174,6 +197,20 @@
 
 /* For moble */
 @media screen and (min-width: 200px) and (max-width: 1399px) {
+     a:link {
+      color: #4A4A4A;
+      text-decoration: none;
+    }
+    
+    a:visited {
+      color: #4A4A4A;
+    }
+    
+    a:hover {
+      font-size: 20px; 
+      color: #4A4A4A;
+    }
+    
     *{
       box-sizing: border-box;
       padding: 0;
@@ -187,22 +224,21 @@
         grid-template-rows: 200px minmax(500px, 1fr) 700px minmax(500px, 1fr) .09fr
     }
     
-    .menu-bar {
+     .menu-bar {
         grid-row: 1;
         grid-column: 1/5;
-        background-color: blue;
+        background-color: white;
         /* Grid Settings */
         
         display: grid;
-        grid-template-columns: 5fr 1fr 1fr;
-        grid-template-rows: 1fr
-        row-gap: 30px;
+        grid-template-columns: 5fr 1fr 10px 1fr 10px 1fr 10px;
+        grid-template-rows: 20px 1fr 120px;
     }
     
         .logo {
             padding-left: 25px;
             background-color: white;
-            grid-row: 1/2;
+            grid-row: 1/4;
             grid-column: 1/2;
         }
         
@@ -213,20 +249,32 @@
         }
         
         .hbutton1 {
+            background-color: #FDF9BA;
+            z-index: 2;
             padding: 25px;
             text-align: center;
-            background-color: white;
-            grid-row: 1/2;
+            grid-row: 2/3;
             grid-column: 2/3;
         }
         
         .hbutton2 {
+            background-color: #FDF9BA;
+            z-index: 2;
             padding: 25px;
             text-align: center;
-            background-color: white;
-            grid-row: 1/2;
-            grid-column: 3/4;
+            grid-row: 2/3;
+            grid-column: 4/5;
         }
+        
+        .hbutton3 {
+            background-color: #FDF9BA;
+            z-index: 2;
+            padding: 25px;
+            text-align: center;
+            grid-row: 2/3;
+            grid-column: 6/7;
+        }
+    
     
     .wrapper1 {
         grid-row: 2/3;
