@@ -1,0 +1,15 @@
+{
+  "name": "planet",
+  "version": "1.0.0",
+  "description": "we will use this folder for the main project i will leave the other projects in the plutotype_nodejs folder for reference",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "passport": "^0.4.1"
+  }
+}
