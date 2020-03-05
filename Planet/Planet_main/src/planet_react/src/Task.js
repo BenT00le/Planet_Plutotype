@@ -1,19 +1,21 @@
 import React from 'react';
 import './App.css';
+import {Link} from 'react-router';
 
-function Task(props)
+export default class Task extends React.Component
 {
-	return(
-		//check params for color and date
-		<div>
-		//specify size static or dynamic
-			<h>props.title</h>
-			
-			<h1>props.notes</h1>
-		</div>
+	render()
+	{
+		return(
+			//check params for color and date
+			<div>
+			//specify size static or dynamic
+				<h>props.title</h>
+				
+				<body>props.notes</body>
+			</div>
 
-	);
+		);
+	}
 }
-
-export default Task
 
