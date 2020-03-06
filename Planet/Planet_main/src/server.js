@@ -1,39 +1,75 @@
-var express = require('express');
+const path = require('path');
+const {Server} = require('http');
+const Express = require('express');
+const React =require('react');
+const renderToString =require('react-dom/server');
+const {match, RouteContext} =require('react-router');
+const routes =require('./routes.js');
 
-var passport = require('passport');
+//var express = require('express');
 
-const app = express();
+//var passport = require('passport');
+
+const app = Express();
+const server = new Server(app);
+app.set('veiw engin', 'ejs');
+app.set('veiws', path.join(__dirname, 'static'));
+
+//folder for static assets
+app.use(Express.static(path.join(__dirname, 'static')))
+
+
 const port = process.env.PORT || 5000
+//console.log that your server is up and running
+app.listen(port, err => 
+    {
+        if(err)
+        {
+            return console.error(err);
+        }
+        console.log(`Listening on port ${port}`);
+    });
 
-// console.log that your server is up and running
-app.listen(port, () => console.log(`Listening on port ${port}`));
 
-// default GET route
-app.get('/', (req, res) => {
-  res.send({ express: 'YOUR EXPRESS BACKEND IS CONNECTED TO REACT' });
+
+
+//universal routing
+app.get('*', (req,res)=>
+{
+    match
+    (
+        {routes, location: req.url},
+        (err, redirectLocation, renderProps) =>
+        {
+            if(err)
+            {
+                return res.status(500).send(err.message);
+            }
+
+            if(redirectLocation)
+            {
+                return res.redirect(302,
+                redirectLocation.pathname + redirectLocation.search);
+            }
+
+            //generate the react markup
+            let markup;
+            if(renderProps)
+            {
+                markup = renderToString(<RouteContext {...renderProps}/>);
+            }
+            else
+            {
+                markup = renderToString(<NotFoundPage/>);
+                res.status(404);
+            }
+
+            return res.render('index', {markup});
+        }   
+    );
 });
 
 
 
 
-/*
- * we need to set up some POST routes to validate input with passport
- * and our DB to do this we can call functions from functions and passport config
- */
-
-// login GET route
-app.get('/login', (req, res) => {
-  res.send({ express: 'send login page' });
-});
-
-// default GET route
-app.get('/register', (req, res) => {
-  res.send({ express: 'send register page' });
-});
-
-
-/*
- * here if we succsefuly validate login credentials
- * send the client to their account page
- */
 

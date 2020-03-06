@@ -13,12 +13,15 @@
     "babel-preset-es2019": "^1.0.0",
     "ejs": "^3.0.1",
     "express": "^4.17.1",
+    "npx": "^10.2.2",
     "passport": "^0.4.1",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-router": "^5.1.2"
   },
   "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
     "bable-loader": "0.0.1-security",
     "http-server": "^0.12.1",
     "webpack": "^4.42.0"

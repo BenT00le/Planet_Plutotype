@@ -14,7 +14,7 @@ module.exports =
 	},
 	module:
 	{
-		loaders:
+		/*loaders:
 		[{
 			test: path.join(__dirname, 'src'),
 			loader: ['babel-loader'],
@@ -23,12 +23,17 @@ module.exports =
 				cacheDirectory: 'babel_cache',
 				presets: ['react', 'es2019']
 			}
-		}]
+		}]*/
+		rules:
+		[
+			{test: /\.(js)$/, use: 'babel-loader'}
+		]
 	},
 	plugins:
 	[
 		new webpack.DefinePlugin({
-			'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+			//'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+			__isBrowser__: "true"
 		}),
 
 		new webpack.optimize.DedupePlugin(),
