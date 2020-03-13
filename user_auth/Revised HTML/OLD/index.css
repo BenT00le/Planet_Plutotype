@@ -1,0 +1,379 @@
+
+/***** FOR DESKTOP *********/
+@media screen and (min-width: 1400px) {
+    
+   a:link {
+      color: #4A4A4A;
+      text-decoration: none;
+    }
+    
+    a:visited {
+      color: #4A4A4A;
+    }
+    
+    a:hover {
+      font-size: 20px; 
+      color: #4A4A4A;
+    }
+    
+    *{
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .theGrid {
+        display: grid;
+        grid-template-columns: .09fr 1fr 1fr .09fr;
+        grid-template-rows: 200px minmax(875px, 1fr) 700px minmax(875px, 1fr) .09fr;
+    }
+    
+    .menu-bar {
+        grid-row: 1;
+        grid-column: 1/5;
+        background-color: white;
+        /* Grid Settings */
+        
+        display: grid;
+        grid-template-columns: 5fr 1fr 10px 1fr 10px 1fr 10px;
+        grid-template-rows: 20px 1fr 120px;
+    }
+    
+        .logo {
+            padding-left: 25px;
+            background-color: white;
+            grid-row: 1/4;
+            grid-column: 1/2;
+        }
+        
+        .logo #logo {
+            object-fit: scale;
+            width: 190px;
+            height: 150px;
+        }
+        
+        .hbutton1 {
+            background-color: #40a4e7;
+            z-index: 2;
+            padding: 25px;
+            text-align: center;
+            grid-row: 2/3;
+            grid-column: 2/3;
+        }
+        
+        .hbutton2 {
+            background-color: #40a4e7;
+            z-index: 2;
+            padding: 25px;
+            text-align: center;
+            grid-row: 2/3;
+            grid-column: 4/5;
+        }
+        
+        .hbutton3 {
+            background-color: #40a4e7;
+            z-index: 2;
+            padding: 25px;
+            text-align: center;
+            grid-row: 2/3;
+            grid-column: 6/7;
+        }
+    
+    .wrapper1 {
+        grid-row: 2/3;
+        grid-column: 2/4;
+        
+        /* Grid Settings */
+        display: grid;
+        grid-template-columns: 1.75fr 1fr;
+        grid-template-rows: 1fr;
+        
+    }
+        .body1 {
+            font-family: Optima, sans-serif;
+            color: white;
+            background-color: #2699E3;
+            text-align: left;
+            font-size: 25px;
+            padding: 50px;
+            padding-top: 250px;
+            grid-row: 1;
+            grid-column: 1/2;
+        }
+        
+        .body1 h1 {
+            font-size: 90px;
+            text-align: left;
+        }
+    
+        .photo-1 {
+            padding-top: 100px;
+            text-align: center;
+            background-color: white;
+            grid-row: 1;
+            grid-column: 2/3;
+        }
+        
+        .photo-1 #calendar {
+            width: 100%;
+            height: auto;
+        }
+    
+    
+    .body2 {
+        font-size: 25px;
+        font-family: Optima, sans-serif;
+        color: #4A4A4A;
+        text-align: center;
+        padding-left: 300px;
+        padding-right: 300px;
+        padding-top: 150px;
+        padding-bottom: 20px;
+        background-color: white;
+        grid-row: 3/4;
+        grid-column: 2/4;
+    }
+    
+    .body2 h1 {
+        font-size: 90px;
+    }
+    
+    .wrapper2 {
+        grid-row: 4/5;
+        grid-column: 2/4;
+        /* Grid Options */
+        
+        display: grid;
+        grid-template-columns: 1fr 1.75fr;
+        grid-template-rows: 1fr;
+        
+    }
+        .body3 { 
+            padding-top: 100px;
+            padding-right: 20px;
+            text-align: center;
+            background-color: white;
+            grid-row: 1/2;
+            grid-column: 1/2;
+        }
+        
+        .body3 #c2 {
+            width: 100%;
+            height: auto;
+        }
+        
+        .photo-3 {
+            font-family: Optima, sans-serif;
+            color: #4A4A4A;
+            font-size: 25px;
+            padding: 50px;
+            padding-top: 250px;
+            background-color: #40a4e7;
+            grid-row: 1/2;
+            grid-column: 2/3;
+        }
+        
+        .photo-3 h1 {
+            font-size: 90px;
+            text-align: left;
+        }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* For moble */
+@media screen and (min-width: 200px) and (max-width: 1399px) {
+     a:link {
+      color: #4A4A4A;
+      text-decoration: none;
+    }
+    
+    a:visited {
+      color: #4A4A4A;
+    }
+    
+    a:hover {
+      font-size: 20px; 
+      color: #4A4A4A;
+    }
+    
+    *{
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+    }
+    
+    
+    .theGrid {
+        display: grid;
+        grid-template-columns: .09fr 1fr 1fr .09fr;
+        grid-template-rows: 200px minmax(500px, 1fr) 700px minmax(500px, 1fr) .09fr
+    }
+    
+     .menu-bar {
+        grid-row: 1;
+        grid-column: 1/5;
+        background-color: white;
+        /* Grid Settings */
+        
+        display: grid;
+        grid-template-columns: 5fr 1fr 10px 1fr 10px 1fr 10px;
+        grid-template-rows: 20px 1fr 120px;
+    }
+    
+        .logo {
+            padding-left: 25px;
+            background-color: white;
+            grid-row: 1/4;
+            grid-column: 1/2;
+        }
+        
+        .logo #logo {
+            object-fit: scale;
+            width: 190px;
+            height: 150px;
+        }
+        
+        .hbutton1 {
+            background-color: #40a4e7;
+            z-index: 2;
+            padding: 25px;
+            text-align: center;
+            grid-row: 2/3;
+            grid-column: 2/3;
+        }
+        
+        .hbutton2 {
+            background-color: #40a4e7;
+            z-index: 2;
+            padding: 25px;
+            text-align: center;
+            grid-row: 2/3;
+            grid-column: 4/5;
+        }
+        
+        .hbutton3 {
+            background-color: #40a4e7;
+            z-index: 2;
+            padding: 25px;
+            text-align: center;
+            grid-row: 2/3;
+            grid-column: 6/7;
+        }
+    
+    
+    .wrapper1 {
+        grid-row: 2/3;
+        grid-column: 2/4;
+        
+        /* Grid Settings */
+        display: grid;
+        grid-template-columns: 1fr
+        grid-template-rows: 1fr 1fr
+        
+    }
+        .body1 {
+            font-family: Optima, sans-serif;
+            color: #4A4A4A;
+            text-align: left;
+            font-size: 25px;
+            padding: 50px;
+            padding-top: 150px;
+            padding-bottom: 200px;
+            background-color: #40a4e7;
+            grid-row: 1/2;
+            grid-column: 1/2;
+        }
+        
+        .body1 h1 {
+            font-size: 90px;
+            text-align: left;
+        }
+    
+        .photo-1 {
+            padding-top: 100px;
+            text-align: center;
+            background-color: white;
+            grid-row: 2/3;
+            grid-column: 1/2;
+        }
+        
+        .photo-1 #calendar {
+            width: 75%;
+            height: auto;
+        }
+    
+    
+    .body2 {
+        font-size: 25px;
+        font-family: Optima, sans-serif;
+        color: #4A4A4A;
+        text-align: center;
+        padding-left: 100px;
+        padding-right: 100px;
+        padding-top: 100px;
+        padding-bottom: 20px;
+        background-color: white;
+        grid-row: 3/4;
+        grid-column: 2/4;
+    }
+    
+    .body2 h1 {
+        font-size: 90px;
+    }
+    
+    .wrapper2 {
+        grid-row: 4/5;
+        grid-column: 2/4;
+        /* Grid Options */
+        
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        
+    }
+        .body3 { 
+            padding-top: 100px;
+            padding-right: 20px;
+            text-align: center;
+            background-color: white;
+            grid-row: 2/3;
+            grid-column: 1/2;
+        }
+        
+        .body3 #c2 {
+            width: 75%;
+            height: auto;
+        }
+        
+        .photo-3 {
+            font-family: Optima, sans-serif;
+            color: #4A4A4A;
+            font-size: 25px;
+            padding: 50px;
+            padding-top: 200px;
+            background-color: #40a4e7;
+            grid-row: 1/2;
+            grid-column: 1/2;
+        }
+        
+        .photo-3 h1 {
+            font-size: 90px;
+            text-align: left;
+        }
+}
+
