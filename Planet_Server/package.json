@@ -1,0 +1,25 @@
+{
+  "name": "servtest",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "0.9.5",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+   "concurrently": "^4.0.1"
+  },
+  "scripts": {
+    "client": "cd client && npm run-script start",
+    "server": "nodemon server.js",
+    "dev": "concurrently --kill-others-on-fail \"npm run-script server\" \"npm run-script client\"",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
+  }
+}
