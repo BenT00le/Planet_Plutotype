@@ -15,7 +15,7 @@
   "scripts": {
     "client": "cd client && npm run-script start",
     "server": "nodemon server.js",
-    "dev": "concurrently --kill-others-on-fail \"npm run-script server\" \"npm run-script client\"",
+    "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",

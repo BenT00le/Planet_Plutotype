@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { BrowserRouter, Route } from "react-router-dom";
 import Calendar from "./Calendar.js";
 import App from './App';
+import Login from './Login';
+import Register from './Register';
 class ReactRtr extends Component
 {
 	render()
@@ -12,8 +14,8 @@ class ReactRtr extends Component
 		<BrowserRouter>
 			<Route path="/client" component={Calendar} />
 			<Route path="/app" component={App} />
-			<Route path="/login" component={App} />
-			<Route path="/register" component={App} />
+			<Route path="/login" component={Login} />
+			<Route path="/register" component={Register} />
 		</BrowserRouter>
 		);
 	}

@@ -24,7 +24,7 @@ app.post('/api/in', (req, res) =>
 	});
 
 //create login routes
-
+app.use(express.static(path.join(__dirname, 'client/static')));
 
 if (process.env.NODE_ENV === 'production')
 {
