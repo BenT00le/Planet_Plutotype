@@ -6,6 +6,8 @@ class Calendar extends Component
 	//for getting the correct data from DB
 	render()
 	{
+		//this.props.UID
+		//used as <Calendar UID="f789ae756789dbc" />
 		return(
 		<div>
 			<h1>

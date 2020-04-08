@@ -5,4 +5,6 @@ import ReactRtr from './ReactRtr.js';
 import './index.css';
 
 //this will render 'App' in to index.html
+//ReactDOM.render(<App />,document.getElementById('root'));
+
 ReactDOM.render(<ReactRtr />,document.getElementById('root'));

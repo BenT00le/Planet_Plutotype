@@ -1,9 +1,10 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const DB_Connection = require('./Functions.js');
+//now we can call DB_Connection.LogIn(USRNM, PASS)
 
 const app = express();
 const port = process.env.Port || 5000;
-
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
