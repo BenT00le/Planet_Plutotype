@@ -31,5 +31,5 @@ DOCKER DB INSTRUCITONS
 psql -h 127.0.0.1 -p 5432 -U postgres
 
 /* To check running configurations */
-	/conninfo;
+	\conninfo;
 
