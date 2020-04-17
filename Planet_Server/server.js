@@ -1,6 +1,8 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const DB_Connection = require('./Functions.js');
+const path = require('path');
+//const calendar = require('client/static/calendar.html')
+//const DB_Connection = require('./Functions.js');
 //now we can call DB_Connection.LogIn(USRNM, PASS)
 
 const app = express();
@@ -22,6 +24,13 @@ app.post('/api/in', (req, res) =>
 			`received : ${req.body.post}`
 		);
 	});
+
+//
+app.get('/user', (req, res) =>
+    {
+        res.sendFile(path.join(__dirname, 'client/static', 'calendar.html'));
+    });
+
 
 //create login routes
 app.use(express.static(path.join(__dirname, 'client/static')));
