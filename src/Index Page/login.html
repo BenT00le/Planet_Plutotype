@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="login.css">
+        <script src="login.js"></script>
+        
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&display=swap" rel="stylesheet">
+        
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        
+        
+    </head>
+    <body>
+        <div class = "TheGrid">
+            <div class = "topBar">
+                P L A N N I N G &nbsp M A D E &nbsp E A S Y <br> <b id = "hedder"> PlanIT Solutions </b></div>
+            <div class = "middleBar">
+                <div class = "fillerRight"></div>
+                <div class = "cell home"> <a href = "index.html">Home</a> </div>
+                <div class = "cell about"> <a href = "#aboutFiller">About</a> </div>
+                <div class = "cell register"> <a href = "register.html">Register</a> </div>
+                <div class = "cell login"><a href = "login.html">Login</a> </div>
+                <div class = "cell fillerLeft"></div>
+            </div>
+            
+            <div class = "loginTitle"><h1>Login</h1></div>
+            
+            <form action="/login" method="POST" class = "formBody">
+                
+                <div class = "emailField">
+                    <input type="email" id="email" name="email" placeholder = "email" reqired>
+                </div>
+            
+                <div class = "passwordField">
+                    <input type="password" id="password" name="password" placeholder = "password" reqired>
+                </div>
+                
+                <div class = "loginButton"><button type="submit" id = "loginButton">Login</button></div>
+                
+                <div class = "registerButton"> <a href="/register" id = "registerButton">register</a> </div>
+                
+            </form>
+            
+        </div>
+        
+    </body>
