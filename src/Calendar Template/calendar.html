@@ -16,19 +16,28 @@
     </head>
     <body onload = "run()">
         <div class = "TheGrid">
-            <div class = "Hedder"> 
-                <div class = "button" id = "back"> <button onclick = "rollDates(-1)" type="button" class="btn btn-default btn-xl"> < </button> </div>
+            <!-- HEADER !-->
+            <div class = "Header">
+                <div class = "button" id = "back">
+                    <button onclick = "rollDates(-1)" type="button" class="btn btn-default btn-xl"> < </button>
+                </div>
                 <div class = "Month" id = "month"> &lt;Month&gt; </div>
-                <div class = "button" id = "forward"> <button onclick = "rollDates(1)" type="button" class="btn btn-default btn-xl"> > </button></div>
+                <div class = "button" id = "forward">
+                    <button onclick = "rollDates(1)" type="button" class="btn btn-default btn-xl"> > </button>
+                </div>
             </div>
-            
+
+            <!-- SIDE BAR !-->
             <div class = "SideBar">
                 <div class = "Logo"> <img src="Logo.png" id = "logo"> </div>
                 <div class = "Categories" id  = "categories"> </div>
-                <div class = "button" id = "dateButton"> <button onclick = "showDates()" type="button" class="btn btn-default btn-xl"> Show Date</div>
-                <div class = "button" id = "backToStart"> <button onclick = "run(1)" type="button" class="btn btn-default btn-xl"> Today</div>
+                <div class = "sideBarButtons">
+                        <button onclick = "showDates()" type="button" class="btn btn-default btn-xl"> Show Date </button>
+                        <button onclick = "run(1)" type="button" class="btn btn-default btn-xl"> Today </button>
+                </div>
             </div>
-            
+
+            <!-- DAYS !-->
             <div class = "Day1">
                 <div class = "DayFiller1">
                     <div class = "DayHolder1" id = "d1"> Day1 Holder</div>
